@@ -1,13 +1,13 @@
 <svg viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
-  {/* Symbol Group - Logo only */}
+  <!-- Symbol Group - Logo only -->
   <g transform="translate(0, 0)">
-    {/* Red Shape: Top-Left Quadrant */}
+    <!-- Red Shape: Top-Left Quadrant -->
     <path 
       d="M0 0 L 50 0 A 50 50 0 0 1 0 50 Z" 
       fill="#EF343A"
     />
     
-    {/* Yellow Shape: Bottom-Right Corner */}
+    <!-- Yellow Shape: Bottom-Right Corner -->
     <path 
       d="M 58 58 L 58 40 A 18 18 0 0 0 40 58 Z" 
       fill="#FFDE56"
