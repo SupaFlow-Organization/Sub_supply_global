@@ -4,12 +4,11 @@ export const aboutContent: AboutSection = {
   sectionLabel: 'About Us',
   title: 'One Supply Chain.',
   highlightedTitle: 'One Accountable Partner.',
-  description: 'SubSupply Global exists to simplify global trade for importers who are tired of managing multiple exporters, agents, and service providers. We don\'t introduce buyers to sellers. We don\'t act as a loose intermediary. Importers deal only with SubSupply Global. Everything else happens inside our controlled, verified ecosystem.',
-  stats: [
-    { value: '99.8', suffix: '%', label: 'On-Time Delivery' },
-    { value: '150', suffix: '+', label: 'Countries Served' },
-    { value: '10M', suffix: '+', label: 'Containers Shipped' },
-  ],
+  description: `SubSupply Global exists to simplify global trade for importers who are tired of managing multiple exporters, agents, and service providers. We don't introduce buyers to sellers. We don't act as a loose intermediary. Importers deal only with SubSupply Global. Everything else happens inside our controlled, verified ecosystem.
+
+Most supply chains fail because responsibility is spread across too many hands. One exporter handles pricing. Another agent handles logistics. Someone else handles compliance. And when things go wrong, no one owns the outcome. SubSupply Global was built to fix that.
+
+We operate as a single, centralized supply partner, taking full responsibility from sourcing to shipment, quality to compliance — so importers can scale with confidence. Our verified network includes franchise partners and approved suppliers who all operate under the same rigorous standards, ensuring consistency, reliability, and transparency at every step.`,
   ctaText: 'Learn More',
   whyWeWereBuilt: 'Most supply chains fail because responsibility is spread across too many hands. One exporter handles pricing. Another agent handles logistics. Someone else handles compliance. And when things go wrong, no one owns the outcome. SubSupply Global was built to fix that. We operate as a single, centralized supply partner, taking full responsibility from sourcing to shipment, quality to compliance — so importers can scale with confidence.',
   whatWeDo: [

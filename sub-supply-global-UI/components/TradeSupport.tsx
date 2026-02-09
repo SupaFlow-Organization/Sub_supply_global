@@ -70,7 +70,7 @@ const StepCard: React.FC<{
       ref={ref}
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      transition={{ duration: 0.6, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: 0.3, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
       className="relative"
     >
       <div className="flex gap-4 sm:gap-6 lg:gap-8">
@@ -80,7 +80,7 @@ const StepCard: React.FC<{
           <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full bg-gradient-to-br from-[#2E4F4A] to-[#1a3a35] flex items-center justify-center text-white font-black text-lg sm:text-xl lg:text-2xl shadow-lg border-2 border-white z-10">
             {String(step.order).padStart(2, '0')}
           </div>
-          
+
           {/* Connecting Line */}
           {index < 4 && (
             <div className="w-[2px] flex-1 bg-gradient-to-b from-[#2E4F4A] via-[#8D9B9A]/30 to-transparent mt-2"></div>
@@ -101,17 +101,17 @@ const StepCard: React.FC<{
               <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-[#F8F9FA] flex items-center justify-center text-[#2E4F4A] group-hover:bg-[#FFDE56] transition-colors duration-300 flex-shrink-0">
                 {iconMap[step.icon] || iconMap.package}
               </div>
-              
+
               {/* Title and Expand Button */}
               <div className="flex-1 flex items-center justify-between gap-4">
-                <h3 className="text-lg sm:text-xl lg:text-2xl font-black text-[#2E4F4A] uppercase tracking-tight leading-tight group-hover:text-[#EF343A] transition-colors duration-300">
+                <h3 className="text-base sm:text-lg lg:text-xl font-black text-[#2E4F4A] uppercase tracking-tight leading-tight group-hover:text-[#EF343A] transition-colors duration-300">
                   {step.title}
                 </h3>
-                <motion.div 
+                <motion.div
                   className="flex-shrink-0"
                   animate={{ rotate: isExpanded ? 180 : 0 }}
-                  transition={{ 
-                    duration: 0.25, 
+                  transition={{
+                    duration: 0.25,
                     ease: [0.4, 0, 0.2, 1]
                   }}
                 >
@@ -141,16 +141,16 @@ const StepCard: React.FC<{
                   <motion.div
                     key="expanded"
                     initial={{ opacity: 0, y: -8 }}
-                    animate={{ 
-                      opacity: 1, 
+                    animate={{
+                      opacity: 1,
                       y: 0,
                       transition: {
                         opacity: { duration: 0.25, delay: 0.1, ease: [0.4, 0, 0.2, 1] },
                         y: { duration: 0.3, delay: 0.1, ease: [0.4, 0, 0.2, 1] }
                       }
                     }}
-                    exit={{ 
-                      opacity: 0, 
+                    exit={{
+                      opacity: 0,
                       y: -8,
                       transition: {
                         opacity: { duration: 0.2, ease: [0.4, 0, 0.2, 1] },
@@ -166,16 +166,16 @@ const StepCard: React.FC<{
                   <motion.div
                     key="collapsed"
                     initial={{ opacity: 0, y: 8 }}
-                    animate={{ 
-                      opacity: 1, 
+                    animate={{
+                      opacity: 1,
                       y: 0,
                       transition: {
                         opacity: { duration: 0.2, ease: [0.4, 0, 0.2, 1] },
                         y: { duration: 0.25, ease: [0.4, 0, 0.2, 1] }
                       }
                     }}
-                    exit={{ 
-                      opacity: 0, 
+                    exit={{
+                      opacity: 0,
                       y: 8,
                       transition: {
                         opacity: { duration: 0.2, ease: [0.4, 0, 0.2, 1] },
@@ -227,7 +227,7 @@ export const TradeSupport: React.FC<TradeSupportProps> = ({ data }) => {
   };
 
   return (
-    <section 
+    <section
       ref={sectionRef}
       className="py-16 sm:py-20 md:py-24 lg:py-32 bg-gradient-to-b from-white via-[#F8F9FA] to-white relative overflow-hidden"
     >
@@ -253,7 +253,7 @@ export const TradeSupport: React.FC<TradeSupportProps> = ({ data }) => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.25, ease: [0.32, 0.72, 0, 1] }}
           className="text-center mb-12 sm:mb-16 md:mb-20"
         >
           <div className="inline-flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
@@ -263,10 +263,10 @@ export const TradeSupport: React.FC<TradeSupportProps> = ({ data }) => {
             </span>
             <span className="w-12 sm:w-20 h-[2px] bg-gradient-to-l from-transparent to-[#EF343A]"></span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#2E4F4A] uppercase italic tracking-tighter mb-4 sm:mb-6 leading-[0.9]">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-[#2E4F4A] uppercase italic tracking-tighter mb-4 sm:mb-6 leading-[0.9]">
             How We Work
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-[#8D9B9A] max-w-2xl mx-auto leading-relaxed font-medium">
+          <p className="text-sm sm:text-base md:text-lg text-[#8D9B9A] max-w-2xl mx-auto leading-relaxed font-medium">
             SubSupply Global supports importers at every stage — before the product is sourced, while it's being produced, and long after it unloads.
           </p>
         </motion.div>

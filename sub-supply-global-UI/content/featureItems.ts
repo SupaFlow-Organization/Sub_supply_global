@@ -9,7 +9,7 @@ export const featureItemsContent: FeatureItem[] = [
   },
   {
     _id: '2',
-    title: 'Global Customs Mastery',
+    title: 'Global Custom Mastery',
     icon: 'globe',
     order: 2,
   },

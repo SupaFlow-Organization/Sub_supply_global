@@ -23,12 +23,12 @@ export const Services: React.FC<ServicesProps> = ({ data }) => {
 
   const services = data && data.length > 0
     ? data.map((service, index) => ({
-        icon: serviceIconMap[service.icon] || <Search className="w-10 h-10 sm:w-12 sm:h-12" strokeWidth={1.5} />,
-        title: service.title,
-        description: service.description,
-        iconColor: iconColors[index % iconColors.length],
-        _id: service._id,
-      }))
+      icon: serviceIconMap[service.icon] || <Search className="w-10 h-10 sm:w-12 sm:h-12" strokeWidth={1.5} />,
+      title: service.title,
+      description: service.description,
+      iconColor: iconColors[index % iconColors.length],
+      _id: service._id,
+    }))
     : [];
 
   const containerVariants = {
@@ -55,7 +55,7 @@ export const Services: React.FC<ServicesProps> = ({ data }) => {
   };
 
   return (
-    <section 
+    <section
       ref={sectionRef}
       className="py-16 sm:py-20 md:py-24 lg:py-32 bg-white relative overflow-hidden"
     >
@@ -81,15 +81,15 @@ export const Services: React.FC<ServicesProps> = ({ data }) => {
               </h2>
               <span className="w-12 sm:w-20 h-[2px] bg-gradient-to-l from-transparent to-[#EF343A]"></span>
             </div>
-            <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#2E4F4A] uppercase italic tracking-tighter font-sans">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-[#2E4F4A] uppercase italic tracking-tighter font-sans">
               Our Services
             </h3>
           </div>
-          <p className="text-[#8D9B9A] max-w-md md:text-right font-medium font-sans text-sm sm:text-base md:text-lg leading-relaxed">
+          <p className="text-[#8D9B9A] max-w-md md:text-right font-medium font-sans text-xs sm:text-sm md:text-base leading-relaxed">
             One partner. One contract. Complete supply chain management from sourcing to shipment — so you can focus on growing your business.
           </p>
         </motion.div>
-        
+
         {/* Services Grid */}
         <motion.div
           variants={containerVariants}
@@ -105,23 +105,23 @@ export const Services: React.FC<ServicesProps> = ({ data }) => {
               className="group relative bg-[#2E4F4A] border border-[#2E4F4A]/10 p-6 sm:p-8 md:p-10 hover:border-[#FFDE56]/40 hover:bg-[#26413d] hover:shadow-xl transition-all duration-300 h-full flex flex-col"
             >
               {/* Icon */}
-              <div 
+              <div
                 className="mb-6 sm:mb-8 transition-transform duration-300 group-hover:scale-110"
                 style={{ color: service.iconColor }}
               >
                 {service.icon}
               </div>
-              
+
               {/* Title */}
-              <h4 className="text-lg sm:text-xl md:text-2xl font-black text-white mb-4 sm:mb-6 uppercase tracking-tight font-sans leading-tight">
+              <h4 className="text-base sm:text-lg md:text-xl font-black text-white mb-4 sm:mb-6 uppercase tracking-tight font-sans leading-tight">
                 {service.title}
               </h4>
-              
+
               {/* Description */}
-              <p className="text-white/80 text-sm sm:text-base leading-relaxed font-medium font-sans flex-1 mb-6">
+              <p className="text-white/80 text-xs sm:text-sm leading-relaxed font-medium font-sans flex-1 mb-6">
                 {service.description}
               </p>
-              
+
               {/* Accent Line */}
               <motion.div
                 className="h-[2px] bg-[#EF343A] rounded-full"

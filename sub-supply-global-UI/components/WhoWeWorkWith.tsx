@@ -43,7 +43,7 @@ export const WhoWeWorkWith: React.FC<WhoWeWorkWithProps> = ({ data }) => {
   };
 
   return (
-    <section 
+    <section
       ref={sectionRef}
       className="py-16 sm:py-20 md:py-24 lg:py-32 bg-gradient-to-b from-white via-[#F8F9FA] to-white relative overflow-hidden"
     >
@@ -68,10 +68,10 @@ export const WhoWeWorkWith: React.FC<WhoWeWorkWithProps> = ({ data }) => {
             </span>
             <span className="w-12 sm:w-20 h-[2px] bg-gradient-to-l from-transparent to-[#EF343A]"></span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#2E4F4A] uppercase italic tracking-tighter mb-4 sm:mb-6 leading-[0.9] font-sans">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-[#2E4F4A] uppercase italic tracking-tighter mb-4 sm:mb-6 leading-[0.9] font-sans">
             {data.title}
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-[#8D9B9A] font-medium max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-[#8D9B9A] font-medium max-w-2xl mx-auto leading-relaxed">
             {data.description}
           </p>
         </motion.div>
@@ -93,17 +93,17 @@ export const WhoWeWorkWith: React.FC<WhoWeWorkWithProps> = ({ data }) => {
               <div className="relative bg-white p-6 sm:p-8 shadow-md hover:shadow-xl border border-[#F1F5F9] transition-all duration-300 h-full overflow-hidden">
                 {/* Background Gradient on Hover */}
                 <div className="absolute inset-0 bg-gradient-to-br from-[#FFDE56]/5 to-[#EF343A]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                
+
                 {/* Content */}
                 <div className="relative z-10 flex items-start gap-4 sm:gap-5">
                   {/* Icon */}
                   <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-[#F8F9FA] flex items-center justify-center text-[#2E4F4A] group-hover:bg-[#FFDE56] group-hover:text-[#2E4F4A] transition-all duration-300 group-hover:scale-110">
                     {icons[index] || <CheckCircle2 className="w-6 h-6" />}
                   </div>
-                  
+
                   {/* Text */}
                   <div className="flex-1 pt-1">
-                    <p className="text-sm sm:text-base lg:text-lg text-[#8D9B9A] font-medium leading-relaxed group-hover:text-[#2E4F4A] transition-colors duration-300">
+                    <p className="text-xs sm:text-sm lg:text-base text-[#8D9B9A] font-medium leading-relaxed group-hover:text-[#2E4F4A] transition-colors duration-300">
                       {characteristic}
                     </p>
                   </div>

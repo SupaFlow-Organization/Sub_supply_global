@@ -23,7 +23,7 @@ export interface AboutSection {
   highlightedTitle: string;
   description: string;
   image?: any;
-  stats: Array<{
+  stats?: Array<{
     value: string;
     suffix: string;
     label: string;

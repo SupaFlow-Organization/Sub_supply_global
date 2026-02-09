@@ -11,6 +11,7 @@ import { FadeIn } from './components/FadeIn';
 import { Features } from './components/HomeSections';
 import { TradeSupport } from './components/TradeSupport';
 import { WhoWeWorkWith } from './components/WhoWeWorkWith';
+import { WhatsAppButton } from './components/WhatsAppButton';
 import { NavigationId, NavItem } from './types';
 import {
   HeroSection,
@@ -71,7 +72,7 @@ const App: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isInitialMount, setIsInitialMount] = useState(true);
-  
+
   // Sync activeTab with URL on mount and route changes
   useEffect(() => {
     const currentTab = pathToTab[location.pathname] || 'home';
@@ -79,7 +80,7 @@ const App: React.FC = () => {
     // Reset scroll state when navigating to a new page
     setScrolled(false);
   }, [location.pathname]);
-  
+
   // Content Data - loaded from local content files
   // All content is imported from the content/ folder and consumed here
   const [heroData] = useState<HeroSection | null>(heroContent);
@@ -117,10 +118,10 @@ const App: React.FC = () => {
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
-    
+
     // Mark initial mount as complete after first render
     setIsInitialMount(false);
-    
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -147,13 +148,13 @@ const App: React.FC = () => {
   // Skip fade animation on initial mount, only animate on tab changes
   const pageVariants = {
     initial: isInitialMount ? { opacity: 1 } : { opacity: 0 },
-    animate: { opacity: 1, transition: { duration: isInitialMount ? 0 : 0.2 } },
-    exit: { opacity: 0, transition: { duration: 0.15 } }
+    animate: { opacity: 1, transition: { duration: isInitialMount ? 0 : 0.15 } },
+    exit: { opacity: 0, transition: { duration: 0.1 } }
   };
 
   return (
     <div className="min-h-screen bg-white font-sans selection:bg-[#FFDE56] selection:text-[#2E4F4A]">
-      <Navbar 
+      <Navbar
         activeTab={activeTab}
         isMenuOpen={isMenuOpen}
         setIsMenuOpen={setIsMenuOpen}
@@ -168,11 +169,11 @@ const App: React.FC = () => {
           <>
             {activeTab === 'home' && (
               <div>
-                <Hero 
-                  key={heroData?.highlightedTitle || 'hero'} 
-                  navigateTo={navigateTo} 
-                  data={heroData} 
-                  trustedCompanies={trustedCompanies} 
+                <Hero
+                  key={heroData?.highlightedTitle || 'hero'}
+                  navigateTo={navigateTo}
+                  data={heroData}
+                  trustedCompanies={trustedCompanies}
                 />
                 <Features navigateTo={navigateTo} data={featureItems} />
                 <TradeSupport data={workflowSteps} />
@@ -181,8 +182,8 @@ const App: React.FC = () => {
             )}
             {activeTab === 'about' && (
               <div className="pt-16 sm:pt-20">
-                <About 
-                  navigateTo={navigateTo} 
+                <About
+                  navigateTo={navigateTo}
                   data={aboutData}
                   whyChooseData={whyChooseData}
                   ecosystemData={ecosystemData}
@@ -257,11 +258,11 @@ const App: React.FC = () => {
           <AnimatePresence mode="wait">
             {activeTab === 'home' && (
               <motion.div key="home" variants={pageVariants} initial="initial" animate="animate" exit="exit">
-                <Hero 
+                <Hero
                   key={`hero-${heroData?.highlightedTitle || Date.now()}`}
-                  navigateTo={navigateTo} 
-                  data={heroData} 
-                  trustedCompanies={trustedCompanies} 
+                  navigateTo={navigateTo}
+                  data={heroData}
+                  trustedCompanies={trustedCompanies}
                 />
                 <Features navigateTo={navigateTo} data={featureItems} />
                 <TradeSupport data={workflowSteps} />
@@ -270,8 +271,8 @@ const App: React.FC = () => {
             )}
             {activeTab === 'about' && (
               <motion.div key="about" variants={pageVariants} initial="initial" animate="animate" exit="exit" className="pt-16 sm:pt-20">
-                <About 
-                  navigateTo={navigateTo} 
+                <About
+                  navigateTo={navigateTo}
                   data={aboutData}
                   whyChooseData={whyChooseData}
                   ecosystemData={ecosystemData}
@@ -345,6 +346,12 @@ const App: React.FC = () => {
       </main>
 
       <Footer navigateTo={navigateTo} />
+
+      {/* WhatsApp Floating Button */}
+      <WhatsAppButton
+        phoneNumber="917219166618"
+        message="Hi! I'm interested in learning more about Sub Supply Global's services."
+      />
     </div>
   );
 };

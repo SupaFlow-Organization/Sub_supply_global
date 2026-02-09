@@ -58,7 +58,7 @@ export const Contact: React.FC<ContactProps> = ({ data }) => {
     setIsSubmitting(false);
     setIsSuccess(true);
     reset();
-    
+
     // Reset success message after 5 seconds
     setTimeout(() => setIsSuccess(false), 5000);
   };
@@ -68,13 +68,13 @@ export const Contact: React.FC<ContactProps> = ({ data }) => {
       <div className="container mx-auto px-4 sm:px-6">
         <FadeIn>
           <div className="flex flex-col lg:flex-row shadow-[0_0_100px_rgba(46,79,74,0.1)] overflow-hidden border border-[#8D9B9A]/10 bg-white">
-            
+
             {/* Contact Info Sidebar */}
             <div className="w-full lg:w-2/5 bg-[#2E4F4A] p-6 sm:p-8 md:p-12 lg:p-16 xl:p-20 text-white relative overflow-hidden">
               <div className="relative z-10">
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-black uppercase italic mb-6 sm:mb-8 md:mb-10 tracking-tighter font-sans">{title}</h3>
-                <p className="text-[#8D9B9A] mb-6 sm:mb-8 md:mb-12 text-sm sm:text-base md:text-lg font-light font-sans">{subtitle}</p>
-                
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-black uppercase italic mb-6 sm:mb-8 md:mb-10 tracking-tighter font-sans">{title}</h3>
+                <p className="text-[#8D9B9A] mb-6 sm:mb-8 md:mb-12 text-xs sm:text-sm md:text-base font-light font-sans">{subtitle}</p>
+
                 <div className="space-y-5 sm:space-y-6 md:space-y-8">
                   <motion.div whileHover={{ x: 5 }} className="flex items-center gap-3 sm:gap-4 md:gap-6 group cursor-pointer touch-manipulation">
                     <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full border border-[#FFDE56]/30 flex items-center justify-center text-[#FFDE56] group-hover:bg-[#FFDE56] group-hover:text-[#2E4F4A] transition-all duration-300 shrink-0">
@@ -96,7 +96,7 @@ export const Contact: React.FC<ContactProps> = ({ data }) => {
                   </motion.div>
                 </div>
               </div>
-              
+
               {/* Decorative Elements */}
               <div className="absolute top-0 right-0 w-2 sm:w-3 md:w-4 h-full bg-[#EF343A]"></div>
               <div className="absolute -bottom-10 sm:-bottom-20 -left-10 sm:-left-20 w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 bg-white/5 rounded-full blur-3xl pointer-events-none"></div>
@@ -106,7 +106,7 @@ export const Contact: React.FC<ContactProps> = ({ data }) => {
             <div className="w-full lg:w-3/5 p-6 sm:p-8 md:p-12 lg:p-16 xl:p-20 bg-white relative">
               <AnimatePresence mode="wait">
                 {isSuccess ? (
-                  <motion.div 
+                  <motion.div
                     key="success"
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -116,7 +116,7 @@ export const Contact: React.FC<ContactProps> = ({ data }) => {
                     <div className="w-16 h-16 sm:w-20 sm:h-20 bg-[#2E4F4A] rounded-full flex items-center justify-center text-[#FFDE56] mb-4 sm:mb-6">
                       <CheckCircle2 size={32} className="sm:w-10 sm:h-10" />
                     </div>
-                    <h4 className="text-2xl sm:text-3xl font-black text-[#2E4F4A] mb-3 sm:mb-4 font-sans">Message Sent</h4>
+                    <h4 className="text-xl sm:text-2xl font-black text-[#2E4F4A] mb-3 sm:mb-4 font-sans">Message Sent</h4>
                     <p className="text-sm sm:text-base text-[#8D9B9A] font-sans px-4">Thank you for reaching out. We will get back to you shortly.</p>
                   </motion.div>
                 ) : (
@@ -126,18 +126,18 @@ export const Contact: React.FC<ContactProps> = ({ data }) => {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                   >
-                    <form 
-                      className="space-y-5 sm:space-y-6 md:space-y-8" 
+                    <form
+                      className="space-y-5 sm:space-y-6 md:space-y-8"
                       onSubmit={handleSubmit(onSubmit)}
                     >
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 md:gap-8">
                         <div className="space-y-2">
                           <Label htmlFor="name" className="text-[#8D9B9A] uppercase text-xs tracking-widest font-bold font-sans">Your Name</Label>
-                          <Input 
+                          <Input
                             id="name"
                             {...register("name")}
                             className={cn(errors.name && "border-destructive")}
-                            placeholder="John Doe" 
+                            placeholder="John Doe"
                           />
                           {errors.name && (
                             <span className="text-destructive text-xs flex items-center gap-1 font-sans">
@@ -146,13 +146,13 @@ export const Contact: React.FC<ContactProps> = ({ data }) => {
                           )}
                         </div>
                         <div className="space-y-2">
-                           <Label htmlFor="email" className="text-[#8D9B9A] uppercase text-xs tracking-widest font-bold font-sans">Email Address</Label>
-                          <Input 
+                          <Label htmlFor="email" className="text-[#8D9B9A] uppercase text-xs tracking-widest font-bold font-sans">Email Address</Label>
+                          <Input
                             id="email"
                             {...register("email")}
-                            type="email" 
+                            type="email"
                             className={cn(errors.email && "border-destructive")}
-                            placeholder="john@company.com" 
+                            placeholder="john@company.com"
                           />
                           {errors.email && (
                             <span className="text-destructive text-xs flex items-center gap-1 font-sans">
@@ -164,12 +164,12 @@ export const Contact: React.FC<ContactProps> = ({ data }) => {
 
                       <div className="space-y-2">
                         <Label htmlFor="mobile" className="text-[#8D9B9A] uppercase text-xs tracking-widest font-bold font-sans">Mobile Number</Label>
-                        <Input 
+                        <Input
                           id="mobile"
                           {...register("mobile")}
-                          type="tel" 
+                          type="tel"
                           className={cn(errors.mobile && "border-destructive")}
-                          placeholder="+971-5800755" 
+                          placeholder="+971-5800755"
                         />
                         {errors.mobile && (
                           <span className="text-destructive text-xs flex items-center gap-1 font-sans">
@@ -179,8 +179,8 @@ export const Contact: React.FC<ContactProps> = ({ data }) => {
                       </div>
 
                       <div className="space-y-2">
-                         <Label htmlFor="message" className="text-[#8D9B9A] uppercase text-xs tracking-widest font-bold font-sans">Project Details</Label>
-                        <Textarea 
+                        <Label htmlFor="message" className="text-[#8D9B9A] uppercase text-xs tracking-widest font-bold font-sans">Project Details</Label>
+                        <Textarea
                           id="message"
                           {...register("message")}
                           className={cn("h-32 font-sans", errors.message && "border-destructive")}
@@ -193,8 +193,8 @@ export const Contact: React.FC<ContactProps> = ({ data }) => {
                         )}
                       </div>
 
-                      <Button 
-                        type="submit" 
+                      <Button
+                        type="submit"
                         disabled={isSubmitting}
                         className="w-full sm:w-auto font-sans font-bold justify-center sm:justify-start touch-manipulation"
                         variant="primary"
