@@ -87,14 +87,14 @@ export const Navbar: React.FC<NavbarProps> = ({
           </button>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-10">
+          <div className="hidden lg:flex items-center gap-4 xl:gap-10">
             {navItems.map((item) => (
               <Button
                 key={item.id}
                 onClick={() => navigateTo(item.id)}
                 variant="ghost"
                 className={cn(
-                  "text-[10px] font-bold uppercase tracking-[0.25em] relative py-1 h-auto hover:bg-transparent shadow-none hover:shadow-none hover:y-0",
+                  "text-[10px] font-bold uppercase tracking-[0.15em] xl:tracking-[0.25em] relative py-1 h-auto hover:bg-transparent shadow-none hover:shadow-none hover:y-0",
                   activeTab === item.id ? activeNavItemColor : navItemColor
                 )}
               >
@@ -114,7 +114,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <Button
               onClick={() => navigateTo('contact')}
               variant={theme === 'light' ? "secondary" : "primary"}
-              className="ml-6 font-bold text-[11px] h-12 px-8 tracking-[0.2em] shadow-lg hover:shadow-xl transition-all duration-300"
+              className="ml-3 xl:ml-6 font-bold text-[11px] h-12 px-5 xl:px-8 tracking-[0.15em] xl:tracking-[0.2em] shadow-lg hover:shadow-xl transition-all duration-300"
             >
               Connect
             </Button>

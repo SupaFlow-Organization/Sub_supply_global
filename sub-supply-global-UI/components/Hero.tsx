@@ -161,7 +161,7 @@ export const Hero: React.FC<HeroProps> = ({ navigateTo, data, trustedCompanies =
 
 
       {/* Aesthetic Vertical Accents - Right Side */}
-      <div className="absolute right-4 sm:right-8 lg:right-12 bottom-0 w-[1px] h-32 sm:h-48 lg:h-64 bg-gradient-to-t from-[#FFDE56] to-transparent opacity-30 hidden md:block"></div>
+      <div className="absolute right-8 lg:right-12 xl:right-16 bottom-0 w-[1px] h-32 sm:h-48 lg:h-64 bg-gradient-to-t from-[#FFDE56] to-transparent opacity-30 hidden lg:block"></div>
 
       <style dangerouslySetInnerHTML={{
         __html: `

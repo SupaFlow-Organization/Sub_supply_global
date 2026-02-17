@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Linkedin, Twitter, Facebook } from 'lucide-react';
+import { Linkedin, Facebook } from 'lucide-react';
 import { NavigationId } from '../types';
 import { Logo } from './Logo';
 
@@ -91,39 +91,49 @@ export const Footer: React.FC<FooterProps> = ({ navigateTo }) => {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-6 sm:pt-8 md:pt-10 lg:pt-12 flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6">
-          <p className="text-[#8D9B9A] text-[9px] sm:text-[10px] font-black uppercase tracking-[0.15em] sm:tracking-[0.2em] font-sans text-center md:text-left">
+        <div className="border-t border-white/10 pt-8 sm:pt-10 md:pt-12 lg:pt-14">
+          {/* Social Icons - Centered with decorative lines */}
+          <div className="flex items-center justify-center gap-6 sm:gap-8 mb-6 sm:mb-8">
+            <div className="hidden sm:block h-[1px] w-12 md:w-20 bg-gradient-to-r from-transparent to-white/20"></div>
+            <div className="flex items-center gap-5 sm:gap-6">
+              <a
+                href="https://www.linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#8D9B9A] hover:text-[#FFDE56] transition-all duration-300 hover:scale-110 touch-manipulation"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-[18px] h-[18px] sm:w-5 sm:h-5" />
+              </a>
+              <span className="w-[1px] h-3 bg-white/15"></span>
+              <a
+                href="https://www.x.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#8D9B9A] hover:text-[#FFDE56] transition-all duration-300 hover:scale-110 touch-manipulation"
+                aria-label="X (formerly Twitter)"
+              >
+                <svg className="w-[18px] h-[18px] sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              </a>
+              <span className="w-[1px] h-3 bg-white/15"></span>
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#8D9B9A] hover:text-[#FFDE56] transition-all duration-300 hover:scale-110 touch-manipulation"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-[18px] h-[18px] sm:w-5 sm:h-5" />
+              </a>
+            </div>
+            <div className="hidden sm:block h-[1px] w-12 md:w-20 bg-gradient-to-l from-transparent to-white/20"></div>
+          </div>
+          {/* Copyright - Centered below */}
+          <p className="text-[#8D9B9A]/70 text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.2em] sm:tracking-[0.25em] font-sans text-center pb-2">
             © 2026 Sub Supply Global. All rights reserved.
           </p>
-          <div className="flex gap-4 sm:gap-6 md:gap-8">
-            <a
-              href="https://www.linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#8D9B9A] hover:text-[#FFDE56] transition-colors touch-manipulation"
-              aria-label="LinkedIn"
-            >
-              <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />
-            </a>
-            <a
-              href="https://www.twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#8D9B9A] hover:text-[#FFDE56] transition-colors touch-manipulation"
-              aria-label="Twitter"
-            >
-              <Twitter className="w-5 h-5 sm:w-6 sm:h-6" />
-            </a>
-            <a
-              href="https://www.facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#8D9B9A] hover:text-[#FFDE56] transition-colors touch-manipulation"
-              aria-label="Facebook"
-            >
-              <Facebook className="w-5 h-5 sm:w-6 sm:h-6" />
-            </a>
-          </div>
         </div>
       </div>
     </footer>
