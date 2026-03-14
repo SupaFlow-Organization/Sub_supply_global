@@ -69,10 +69,10 @@ export const Footer: React.FC<FooterProps> = ({ navigateTo }) => {
               Shams Free Zone, Dubai, UAE
             </p>
             <p className="text-[#8D9B9A] font-medium leading-relaxed font-sans text-xs sm:text-sm md:text-base mb-2">
-              <a href="tel:+9715800755" className="hover:text-[#FFDE56] transition-colors">+971-5800755</a>
+              <a href="tel:+917219166618" className="hover:text-[#FFDE56] transition-colors">+917219166618</a>
             </p>
             <p className="text-[#8D9B9A] font-medium leading-relaxed font-sans text-xs sm:text-sm md:text-base">
-              <a href="mailto:Reach@subsupplyglobal.com" className="hover:text-[#FFDE56] transition-colors break-all">Reach@subsupplyglobal.com</a>
+              <a href="mailto:connect@subsupplyglobal.com" className="hover:text-[#FFDE56] transition-colors break-all">connect@subsupplyglobal.com</a>
             </p>
           </div>
 

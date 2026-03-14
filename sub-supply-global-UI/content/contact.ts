@@ -3,8 +3,8 @@ import { ContactInfo } from '../lib/types';
 export const contactContent: ContactInfo = {
   title: 'Get in Touch',
   subtitle: 'Ready to streamline your supply chain? Let\'s discuss how we can help.',
-  phone: '+971-5800755',
-  email: 'Reach@subsupplyglobal.com',
+  phone: '+917219166618',
+  email: 'connect@subsupplyglobal.com',
   serviceOptions: [
     { value: 'sourcing-procurement', label: 'Sourcing and Procurement' },
     { value: 'product-development', label: 'Product Development and Supplier Alignment' },

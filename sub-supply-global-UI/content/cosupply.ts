@@ -115,8 +115,8 @@ export const cosupplyContent: CoSupplySection = {
   },
   contact: {
     location: 'Shams Free Zone, Dubai, UAE',
-    phone: '+971-5800755',
-    email: 'Reach@subsupplyglobal.com',
+    phone: '+917219166618',
+    email: 'connect@subsupplyglobal.com',
     ctaText: 'Apply to Join Co-Supply',
   },
 };

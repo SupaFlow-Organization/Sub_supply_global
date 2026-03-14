@@ -30,8 +30,8 @@ interface ContactProps {
 export const Contact: React.FC<ContactProps> = ({ data }) => {
   const title = data?.title || 'Get a Quote';
   const subtitle = data?.subtitle || 'Speak with our specialists to optimize your supply chain today.';
-  const phone = data?.phone || '+971-5800755';
-  const email = data?.email || 'Reach@subsupplyglobal.com';
+  const phone = data?.phone || '+917219166618';
+  const email = data?.email || 'connect@subsupplyglobal.com';
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
@@ -137,7 +137,7 @@ export const Contact: React.FC<ContactProps> = ({ data }) => {
                             id="name"
                             {...register("name")}
                             className={cn(errors.name && "border-destructive")}
-                            placeholder="John Doe"
+                            placeholder="Ex: John Doe"
                           />
                           {errors.name && (
                             <span className="text-destructive text-xs flex items-center gap-1 font-sans">
@@ -152,7 +152,7 @@ export const Contact: React.FC<ContactProps> = ({ data }) => {
                             {...register("email")}
                             type="email"
                             className={cn(errors.email && "border-destructive")}
-                            placeholder="john@company.com"
+                            placeholder="Ex: john@company.com"
                           />
                           {errors.email && (
                             <span className="text-destructive text-xs flex items-center gap-1 font-sans">
@@ -169,7 +169,7 @@ export const Contact: React.FC<ContactProps> = ({ data }) => {
                           {...register("mobile")}
                           type="tel"
                           className={cn(errors.mobile && "border-destructive")}
-                          placeholder="+971-5800755"
+                          placeholder="Ex: +919876543210"
                         />
                         {errors.mobile && (
                           <span className="text-destructive text-xs flex items-center gap-1 font-sans">
@@ -184,7 +184,7 @@ export const Contact: React.FC<ContactProps> = ({ data }) => {
                           id="message"
                           {...register("message")}
                           className={cn("h-32 font-sans", errors.message && "border-destructive")}
-                          placeholder="Tell us about your cargo requirements..."
+                          placeholder="Ex: Tell us about your cargo requirements..."
                         />
                         {errors.message && (
                           <span className="text-destructive text-xs flex items-center gap-1 font-sans">
